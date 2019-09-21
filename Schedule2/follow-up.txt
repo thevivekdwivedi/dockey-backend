@@ -1,0 +1,10 @@
+Title- Appendectomy Follow Up #2
+Start- 09/21/2019 10:00:00
+End- 09/21/2019 11:00:00
+Doctor- Dr. John M Smith
+Desc- "Follow up appointment #2 \n14 days after operation\n Duration: 30 minutes \nPlease arrive 30 \nminutes before appointment \n time for a brief physical exam"
+--Title- Appendectomy Follow Up #3
+Start- 09/22/2019 10:00:00
+End- 09/22/2019 11:00:00
+Doctor- Dr. John M Smith
+Desc- "Follow up appointment #3 \n15 days after operation\n Duration: 30 minutes \nPlease arrive 30 \nminutes before appointment \n time for a brief physical exam"
