@@ -7,21 +7,6 @@ import os.path
 
 app = Flask(__name__)
 
-
-@app.route("/", methods=['GET'])
-def hello():
-    patient_id = request.args['patient_id']
-    message_id = request.args['message_id']
-
-    text_list = search(patient_id, message_id)
-
-    return " ".join(text_list)
-
-
-if __name__ == '__main__':
-    app.run()
-
-
 # using default scoring BM25F and exact match
 def search(patient: str, qry_str: str) -> List[str]:
     schema = Schema(patient=ID(stored=True), content=TEXT(stored=True))
@@ -54,3 +39,18 @@ def search(patient: str, qry_str: str) -> List[str]:
             return []
         else:
             return [result['content'] for result in results]
+
+
+@app.route("/", methods=['GET'])
+def hello():
+    patient_id = request.args['patient_id']
+    message_id = request.args['message_id']
+
+    text_list = search(patient_id, message_id)
+
+    return " ".join(text_list)
+
+
+if __name__ == '__main__':
+    app.run()
+
